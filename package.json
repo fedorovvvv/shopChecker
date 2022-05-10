@@ -1,0 +1,32 @@
+{
+  "name": "ps5cheker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaPalmDev/ps5checker.git"
+  },
+  "keywords": [],
+  "author": "Nikita Fedorov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaPalmDev/ps5checker/issues"
+  },
+  "homepage": "https://github.com/NikitaPalmDev/ps5checker#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.16"
+  }
+}
