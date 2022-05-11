@@ -2,11 +2,13 @@ export class NAMES {
     static suffixes = {
         'DE': 'Digital Edition',
         'Pro': 'Pro',
-        'Black': 'Black'
+        'Slim': 'Slim',
+        'Black': 'Black',
     }
     static dictionary = {
         'ps5': 'Playstation 5',
-        'ps4': 'Playstation 4,'
+        'ps4': 'Playstation 4',
+        'DS': 'PlayStation DualSense'
     }
 
     static getValue(key = '', obj = {}) {

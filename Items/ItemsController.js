@@ -2,7 +2,7 @@ import {ITEMS} from "../Stores/ItemsStore.js";
 
 export class ItemsController {
     static async getGetter(items = ITEMS) {
-        return items.map(({get}) => get())
+        return items.filter(item => item.get !== undefined).map(({get}) => get())
     }
 
     static async getAll(items = ITEMS) {
