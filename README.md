@@ -1,25 +1,32 @@
-# ps5checker
-## by Nikita Fedorov
-
+# shopChecker by NikitaFedorov
 ## API
 
-#### Получить все товары
+#### Схема товара Item
+```code
+{
+  site: string,
+  name: string,
+  url: string,
+  inStock: boolean,
+  price: number
+}
+```
 
-```http
+#### Получить все товары Array<Item>
+
+```
   GET /api/check
 ```
 
-#### Поиск по товарам
+#### Поиск по товарам Array<Item>
 
-```http
-  GET /api/check/find?price=:60000
+```
+  GET /api/check/find?
 ```
 _поиски не чувствительны к регистру и пробелам_
 | Query   	| Type    	| Описание               	| Примеры                                              	|
 |---------	|---------	|------------------------	|------------------------------------------------------	|
-| site    	| string  	| Поиск по сайтам.       	|                                                      	|
-| name    	| string  	| Поиск по наименованию. 	|                                                      	|
-| inStock 	| boolean 	| Проверка наличия       	|                                                      	|
-| price   	| string  	| **"от:до"**            	| (от и до) = 2000:8000<br>(от) = 2000<br>(до) = :8000 	|
-|         	|         	|                        	|                                                      	|
-|         	|         	|                        	|                                                      	|
+| site    	| string  	| Поиск по сайтам.       	| 'vid' = m**vid**eo.com           |
+| name    	| string  	| Поиск по наименованию. 	| 'station5' = Play**Station 5**|
+| inStock 	| boolean 	| Проверка наличия       	| *true* = В наличии|
+| price   	| string  	| цена **"от:до"**        | (от и до) = 2000:8000<br>(от) = 2000<br>(до) = :8000 	|
