@@ -24,7 +24,7 @@ export class ItemsController {
         return (await Promise.all(await this.getGetter(items))).filter(item => `${item.inStock}` === `${inStock}`);
     }
 
-    static async find({site, name, stock}) {
+    static async find({site, name, stock, price}) {
         let items = ITEMS
         if (site) {
             items = this.findSite(site, items)
@@ -32,8 +32,8 @@ export class ItemsController {
         if (name) {
             items = this.findName(name, items)
         }
-        if (stock) {
-            items = await this.findInStock(stock, items)
+        if (stock || price) {
+            stock && (items = await this.findInStock(stock, items))
         }
         return items
     }
