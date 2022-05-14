@@ -25,7 +25,8 @@ export class ItemsController {
     static findPrice(price= '0:100000', items = ITEMS) {
         return items.filter(({price:p}) => {
             const [from, to] = price.split(':').map(str => +str)
-            if (from !== undefined || to !== undefined) {
+            console.log(from, to)
+            if (from !== undefined && to !== undefined) {
                 return p >= from && p <= to;
             } else if (from !== undefined) {
                 return p >= from
